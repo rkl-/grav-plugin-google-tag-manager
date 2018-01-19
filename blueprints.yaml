@@ -1,0 +1,35 @@
+name: GoogleTagManager
+version: 1.0.0
+description: "Implementation for the Google Tag Manager"
+icon: bar-chart
+author:
+  name: Romano Kleinwaechter
+  email: romano.kleinwaechter@gmail.com
+  url: https://blog.rkl.io
+homepage: https://github.com/rkl-/grav-plugin-google-tag-manager
+keywords: google, tag, manager, plugin,
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    container_id:
+      type: text
+      size: medium
+      classes: fancy
+      label: Container Id
+      default: rendered
+      options:
+        rendered: Rendered Content (Slower)
+        raw: Raw Markdown Content (Faster)
